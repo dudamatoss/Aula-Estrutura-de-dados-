@@ -10,14 +10,30 @@ public class Main {
 
         Random r = new Random();
 
-        for(int i =0; i < vetor.length; i++){
+        for(int i = 0; i < vetor.length; i++){
             vetor[i] = r.nextInt(10);
         }
 
+        int[] v1 = Arrays.copyOf(vetor, vetor.length);
+        int[] v2 = Arrays.copyOf(vetor, vetor.length);
+        int[] v3 = Arrays.copyOf(vetor, vetor.length);
+        int[] v4 = Arrays.copyOf(vetor, vetor.length);
+        int[] v5 = Arrays.copyOf(vetor, vetor.length);
 
-        Complexidade.bubbleSort(vetor);
+        System.out.println("Bubble Sort:");
+        Complexidade.bubbleSort(v1);
 
+        System.out.println("\nSelection Sort:");
+        Complexidade.selectionSort(v2);
 
+        System.out.println("\nInsertion Sort:");
+        Complexidade.insertionSort(v3);
+
+        System.out.println("\nMerge Sort:");
+        Complexidade.mergeSort(v4);
+
+        System.out.println("\nQuick Sort:");
+        Complexidade.quickSort(v5);
 
     }
 }
